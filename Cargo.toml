@@ -20,7 +20,7 @@ default = ["parallel_loading"]
 
 
 [dependencies]
-vid_dup_finder_lib = {features = ["app_only_fns"]}
+vid_dup_finder_lib = {version = "0.1", features = ["app_only_fns"]}
 generic_filesystem_cache = "0.1"
 walkdir = "2"
 image = "0.23"
