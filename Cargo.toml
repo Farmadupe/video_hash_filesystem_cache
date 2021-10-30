@@ -1,0 +1,41 @@
+[package]
+name = "video_hash_filesystem_cache"
+version = "0.1.0"
+authors = ["Farmadupe"]
+license = "MIT OR Apache-2.0"
+keywords = ["cache", "vid_dup_finder"]
+categories = ["caching"]
+description = "A companion cache for storing the video hashes used by the vid_dup_finder_lib crate"
+repository = "https://github.com/Farmadupe/video_hash_filesystem_cache"
+edition = "2018"
+
+[lib]
+name = "video_hash_filesystem_cache"
+path = "src/lib.rs"    
+crate-type = ["lib"]
+
+[features]
+"parallel_loading" = []
+default = ["parallel_loading"]
+
+
+[dependencies]
+vid_dup_finder_lib = {features = ["app_only_fns"]}
+generic_filesystem_cache = "0.1"
+walkdir = "2"
+image = "0.23"
+serde = { version = "1.0", features = ["derive"] } 
+serde_json = "1.0"
+bincode = "1.3"
+rayon = "1.5"
+log = "0.4"
+thiserror = "1.0"
+itertools = "0.10"
+rand = "0.8"
+ 
+
+[dev-dependencies]
+chrono = "0.4"
+
+
+
